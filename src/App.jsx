@@ -1,10 +1,21 @@
-import React, {useState} from "react"
+import React, {useEffect, useState} from "react"
 import DisplayTodo from "./components/DisplayTodo";
 import InputTodo from "./components/InputTodo";
 import { TodoContext } from "./context/context"
 function App() {
   const[todos, setTodos] = useState([]);
   
+  useEffect(()=>{
+   let data = JSON.parse(localStorage.getItem("todos"));
+   if(data && data.length>0){
+    setTodos(data);
+   }
+  },[])
+
+  useEffect(()=>{
+    localStorage.setItem("todos", JSON.stringify(todos));
+  },[todos])
+
   const addTodo = (todo) =>{
     setTodos((prev)=>[...prev, {...todo, id:Date.now()}])
   }
