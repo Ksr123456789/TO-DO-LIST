@@ -1,4 +1,5 @@
 import React, {useEffect, useState} from "react"
+import './App.css'
 import DisplayTodo from "./components/DisplayTodo";
 import InputTodo from "./components/InputTodo";
 import { TodoContext } from "./context/context"
@@ -34,20 +35,25 @@ function App() {
   console.log(todos);
   return (
   <TodoContext.Provider value={{todos, addTodo, updateTodo, deleteTodo, toggleTodo}}>
-    <div>
-      <div>
+    <div className="ext">
+     <div className="container">
+        <div className="heading">
+         <h1>TO-DO-LIST</h1>
+        </div>
+      <div className="todoinput">
         {/*inputTodo*/}
         <InputTodo/>
       </div>
       <div>
         {
           todos.map((todo)=>(
-            <div key={todo.id}>
+            <div className="displayTodo" key={todo.id}>
               <DisplayTodo todo={todo}/>
             </div>
           ))
         }
       </div>
+     </div>
     </div>
   </TodoContext.Provider>
   )

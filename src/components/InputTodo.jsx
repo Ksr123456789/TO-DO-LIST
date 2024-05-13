@@ -17,12 +17,15 @@ function InputTodo() {
     <>
     <div>
       <form onSubmit={add}>
+       <div className='form'>
         <input 
+        placeholder='Enter your task'
         type="text" 
         value={todo}
         onChange={(e)=>setTodo(e.target.value)}
         />
-        <button type='submit'>add Todo</button> 
+        <button type='submit'>Add Todo</button>
+        </div>   
       </form>
     </div>
     </>

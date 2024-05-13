@@ -11,19 +11,21 @@ function DisplayTodo({todo}) {
   }
   return (
     <>
-    <div>
+    
       <input
        type="checkbox" 
        checked={todo.completed}
        onChange={toggle}
        />
-      <input 
+      <input
+      className={`textinput ${todo.completed ? 'line' : ""}`} 
       type='text'
       value={task}
       readOnly={!isEditable}
 
       onChange={(e)=>setTask(e.target.value)}
       />
+      <div className='btns'>
       <button
         disabled={todo.completed}
         onClick={()=>{
@@ -36,7 +38,8 @@ function DisplayTodo({todo}) {
         }} 
       >{isEditable ? "📁": "✏️"}</button>
       <button onClick={()=>deleteTodo(todo.id)}>❌</button>
-    </div>
+      </div>
+  
       
     </>
   )

@@ -1,0 +1,84 @@
+.ext{
+  margin: auto;
+  display: flex;
+  justify-content: center;
+  margin-top: 40px;
+  height: 600px;
+  width: 550px;
+  background-color: #1c205f;
+  border-radius: 20px;
+}
+
+.container{
+  margin-top: 30px;
+    display: flex;
+    flex-direction: column;
+    gap: 1rem
+}
+
+.container .heading{
+  color: #f27d98;
+}
+
+.form{
+  display: flex;
+  gap: 10px;
+
+}
+.todoinput input::placeholder{
+  color: #1c205f;
+}
+.todoinput input{
+  font-size: 1.5rem;
+  background-color: #7278d5;
+  border: none;
+  outline: none;
+  border-radius: 4px;
+  height: 2.8rem;
+}
+
+
+.todoinput button{
+  font-size: 1.5rem;
+  background-color: #ec325d;
+  height: 2.9rem;
+  border-radius: 10px;
+  font-weight: 700;
+}
+
+.displayTodo{
+  display: flex;
+  gap: 15px;
+  margin: 15px;
+  font-size: 1.5rem;
+  background-color: #7278d5;
+  border: none;
+  outline: none;
+  border-radius: 4px;
+  height: 2rem;
+}
+
+.displayTodo .textinput{
+  width: 66%;
+  background-color: #7278d5 ;
+  border: none;
+  outline: none;
+  font-size: 1.2rem;
+}
+
+.displayTodo .line{
+  text-decoration: line-through;
+}
+
+.displayTodo .btns{
+  display: flex;
+  align-items: center;
+  gap: 5px;
+  width: 10%;
+}
+
+.displayTodo .btns button{
+  border-radius: 5px;
+  background-color: #1c205f;
+  outline: none;
+}
